@@ -1,0 +1,77 @@
+.partner-profile-section {
+  & *:disabled {
+    cursor: not-allowed;
+  }
+  & .form-card {
+    width: 880px;
+    text-align: left;
+    min-height: 600px;
+    & #overview {
+      min-width: 100%;
+    }
+    & .card-header {
+      overflow-y: auto;
+      & .card-header-nav {
+        display: flex;
+        & button {
+          flex-grow: 1;
+          margin: 0 3px;
+          color: dimgrey;
+          font-weight: bold;
+          background-color: transparent;
+          border: none;
+          border-radius: 4px;
+          outline: none;
+          line-height: 2;
+          transition: all 0.2s ease;
+          min-width: fit-content;
+          &:hover {
+            background-color: rgba(100, 100, 100, 0.1);
+            color: black;
+            cursor: pointer;
+          }
+          &.active {
+            background-color: rgba(100, 100, 100, 1);
+            color: white;
+          }
+        }
+      }
+    }
+    & .card-body {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      & .field-row {
+        direction: rtl;
+        text-align: right;
+        margin-bottom: 40px;
+        min-width: 45%;
+        flex-grow: 1;
+        margin: 18px;
+      }
+    }
+  }
+}
+.partner-profile-section._rtl {
+  & .form-card {
+    direction: rtl;
+    text-align: right;
+    & .card-header {
+      & .card-header-nav {
+        flex-direction: row;
+      }
+    }
+    & .card-body {
+      & .table {
+        & small {
+          direction: rtl;
+        }
+      }
+      & .offers-table {
+        & td {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
